@@ -6,13 +6,18 @@
         <style>
             body {
               margin: 0;
+              font-family:Arial, Helvetica, sans-serif;
+              padding-left: 6vw;      /* 左余白 */
+              padding-right: 6vw;     /* 右余白 */
             }
           
             .hero {
               position: relative;
-              width: 100%;
+              margin-left: -6vw;
+              margin-right: -6vw;
+              width: calc(100% + 12vw);
               height: 100vh; /* 画面いっぱい */
-              background-image: url("img/tokyo.jpg"); /* jpg / png / gif */
+              background-image: url("img/IMG_0466.HEIC"); /* jpg / png / gif */
               background-size: cover;
               background-position: center;
               
@@ -21,7 +26,7 @@
             .hero-overlay {
               position: absolute;
               inset: 0;
-              background: rgba(0, 0, 0, 0.45);
+              background: rgba(0, 0, 0, 0.1);
             }
           
             .hero-text {
@@ -32,13 +37,13 @@
               flex-direction: column;
               /* 位置調整 */
               justify-content: flex-start;   /* 上寄せ */
-              align-items: flex-start;       /* 左寄せ */
+              align-items: center;       /* 左寄せ */
 
-              padding-top: 15vh;             /* 上から少し離す（調整可） */
-              padding-left: 8vw;             /* 左余白 */
+              padding-top: 20vh;             /* 上から少し離す（調整可） */
+              padding-left: 0vw;             /* 左余白 */
 
               color: white;
-              text-align: left;
+              text-align: center;
                 }
           
             .hero-text h1 {
@@ -85,11 +90,11 @@
             <div class="hero-text">
               <h1 style="font-family: 'Orbitron', sans-serif;">IMAB2026</h1>
               <p>The Second International Workshop on<br>
-                Mathematics and AI for Biomedicine<br><br>
-                November 30th, 2026<br>
-                The University of Tokyo & Online<br><br>
-                International workshop for next-generation fusion research
+                Mathematics and AI for Biomedicine<br><br><br><br><br><br><br><br><br><br>
+                
               </p>
+              <h2 style="font-family: 'Orbitron', sans-serif;">November 30th, 2026<br>
+                The University of Tokyo & Online<br><br></h2>
             </div>
         </div>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -168,8 +173,8 @@
           </h2>
           
           <div class="info-grid">
-            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd_6X2xAhIH5ySb1MZm7ORQP2KCZDSzMlx8WFjzX7RJiUrJBA/viewform" target="_blank">
-              Register Now For Free! (Coming soon)
+            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdmWfVw7bdUYdPilc4Ex7rPWf3uN72JH2u7I5TCTK0HNLxKzQ/viewform?usp=header" target="_blank">
+              Register Now For Free!
             </a>
           
             <a class="info-btn" href="mailto:haruhisa-oda0722@g.ecc.u-tokyo.ac.jp" target="_blank">
@@ -181,16 +186,23 @@
             </a>
           </div>
         <h2 style="font-family:'Orbitron', sans-serif; color:darkblue; font-weight:bold;">
-          Extended Abstract Submission
+          Abstract Submission
         </h2>
-          <p>If you want to apply for overseas travel support, you need to submit the extended abstract by March 31st, 2026. Please use the following template TeX file to prepare your extended abstract.
-            IMAB2026 is a hybrid event, and you can present both in-person and online. If you are accepted for overseas travel support, then you need to present your work in person.
+          <p>There are two submission types; <span style="font-weight: bold;">Short Abstract</span> and <span style="font-weight: bold;">Extended Abstract</span>.<br>
+            If you want to apply for overseas travel support, you need an Extended Abstract. Submission deadline is <span style="font-weight: bold;">March 31st, 2026.</span> Please use the template TeX file to prepare your extended abstract.
+            Please send your Extended Abstract to the Organizer Email above.<br>
+            IMAB2026 is a hybrid event, and you can present both in-person and online. If you are accepted for overseas travel support, then you need to present your work in person.<br>
+            For presenters who do not apply for overseas travel support, please submit a short abstract (<200 words) using the short abstract submission form.
           </p>    
-          <a class="info-btn"
-            href="papertemplate/imab2026-template.tex"
-            download>
-            Download Extended Abstract Template from here
-          </a>
+          <div class="info-grid">
+            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc2yRhA5GebfyUj0bFTYcx8FyTUCYcsTGAuMuObJIXtm9-JqA/viewform?usp=publish-editor" target="_blank">
+              Short Abstract Submission Form
+            </a>
           
+            <a class="info-btn" href="papertemplate/imab2026-template.tex" download>
+                Extended Abstract Template
+            </a>
+          </div>
+
     </body>
 </html> 
