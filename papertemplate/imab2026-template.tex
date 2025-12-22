@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{article}
+
+% =========================
+% package
+% =========================
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=25mm
+}
+% =========================
+% Conference name
+% =========================
+\newcommand{\ConferenceName}{Presentation Abstract for IMAB2026}
+
+% =========================
+% Header / Footer
+% =========================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\ConferenceName}
+\fancyfoot[C]{\thepage}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\ConferenceName}
+  \fancyfoot[C]{\thepage}
+}
+% =========================
+% Theorem environments
+% =========================
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+% =========================
+% Title / Author / Affiliation
+% =========================
+\title{\bfseries Abstract Template for IMAB2026}
+\author{
+First Author$^{1}$,
+Second Author$^{2}$\\[0.5ex]
+$^{1}$Department of Mathematics, University A\\
+$^{2}$Graduate School of Medicine, University B\\
+\texttt{author1@example.com},
+\texttt{author2@example.com}
+}
+
+\date{}
+
+% =========================
+% Document
+% =========================
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Abstract should be less than 200 words. Please do not include abbreviations in the abstract.
+\end{abstract}
+
+\section{Introduction}
+This is the extended abstract paper template for IMAB2026. Please follow the instructions in this template to prepare your extended abstract submission. If you apply for overseas travel support, you need to submit your extended abstract by \textbf{March 31st}.
+IMAB2026 is a hybrid event. You can present both in-person and online. If you are accepted for overseas travel support, you need to attend the conference in-person and present at the venue. This extended abstract will be compiled into a program book and will be available to IMAB2026 participants.
+\section{Results}
+Typical mathematical commands are already available in the template. You can use it as follows.
+\begin{theorem}
+$x^2 + y^2 = z^2$
+\end{theorem}
+\begin{proof}
+Proof here.
+\end{proof}
+You can cite a paper like this \cite{sample1}. Multiple references can be combined like this \cite{sample1, sample2}.
+The abstract should be no more than 2 pages. You can include up to 2 figures/tables.
+You can add and use your preferred packages, but please do not change the default font size and spacing to fit within the page limit. We do not have a strict file size limit. However, please keep your file size as small as possible. We appreciate your understanding.
+\section{Discussions}
+We thank you for your invaluable contribution to the event. We look forward to your presentation in IMAB2026!
+\section*{Acknowledgments}
+This work is supported by XXX.
+% =========================
+% References
+% =========================
+\begin{thebibliography}{9}
+
+\bibitem{sample1}
+A. Author,
+\textit{Title of the paper},
+Journal Name, Vol.~1 (2024), 1--10.
+\bibitem{sample2}
+B. Author,
+\textit{Title of the paper},
+Journal Name, Vol.~2 (2025), 1--10.
+
+\end{thebibliography}
+
+\end{document}

@@ -3,8 +3,95 @@
     <head>
         <meta charset="UTF-8">
         <title>IMAB2026</title>
+        <style>
+            body {
+              margin: 0;
+            }
+          
+            .hero {
+              position: relative;
+              width: 100%;
+              height: 100vh; /* 画面いっぱい */
+              background-image: url("img/tokyo.jpg"); /* jpg / png / gif */
+              background-size: cover;
+              background-position: center;
+              
+            }
+          
+            .hero-overlay {
+              position: absolute;
+              inset: 0;
+              background: rgba(0, 0, 0, 0.45);
+            }
+          
+            .hero-text {
+              position: relative;
+              z-index: 1;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              /* 位置調整 */
+              justify-content: flex-start;   /* 上寄せ */
+              align-items: flex-start;       /* 左寄せ */
+
+              padding-top: 15vh;             /* 上から少し離す（調整可） */
+              padding-left: 8vw;             /* 左余白 */
+
+              color: white;
+              text-align: left;
+                }
+          
+            .hero-text h1 {
+              font-size: clamp(2rem, 8vw, 4rem);
+              margin: 0;
+              letter-spacing: 2px;
+            }
+          
+            .hero-text p {
+              margin-top: 1rem;
+              font-size: clamp(1rem, 3vw, 1.5rem);
+            }
+            .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            }
+
+            .info-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #00bfff, #7b00ff);
+            border-radius: 10px;
+
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            }
+        </style>
     </head>
     <body>
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+              <h1 style="font-family: 'Orbitron', sans-serif;">IMAB2026</h1>
+              <p>The Second International Workshop on<br>
+                Mathematics and AI for Biomedicine<br><br>
+                November 30th, 2026<br>
+                The University of Tokyo & Online<br><br>
+                International workshop for next-generation fusion research
+              </p>
+            </div>
+        </div>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
         <div style="
         display:flex;
@@ -38,7 +125,7 @@
             const now = new Date();
             const diff = targetDate - now;
             if(diff <= 0){
-            document.getElementById("countdown").textContent = "Thank you very much!";
+            document.getElementById("countdown").textContent = "Now happening!";
             clearInterval(timer);
             return;
             }
@@ -52,9 +139,58 @@
         const timer = setInterval(updateCountdown, 1000);
         </script>
 
-        <h1>Welcome to IMAB2026!</h1>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">News & Updates</h2>
+        <p>2025/12/20 Website Open. </p>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Welcome to IMAB2026!</h2>
         <p>The Second International Workshop on Mathematics and AI for Biomedicine (IMAB2026) is an international workshop to communicate and interact with a wide range of researchers in the interdisciplinary field of mathematics, AI, and biomedical research.
             Topics of interest include, but are not limited to topology, geometry, analytical methods, physics, statistics, machine learning, big data, simulations, visualizations, computation, engineering, and technology in biomedical research.
             IMAB2026 will take place in hybrid mode. </p>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Message from Conference Chair</h2>
+        <p>Last year, we launched our first IMAB, IMAB2025. As the fusion research field grows, we also need to grow and become a better community to support researchers.
+            With new organizing committee members, we are planning sessions to foster active discussions and build new researcher networks. We look forward to seeing you in IMAB2026.<br>
+            <span style="display: block; text-align: right;font-weight: bold;">
+            Haruhisa Oda<br> 
+            IMAB2026 Conference Chair
+            </span >
+        </p>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Looking back: IMAB2025</h2>
+        <p>IMAB2025 was completed with success in UTokyo and online on December 4th, 2025, 
+            thanks to the active participation by approximately 60 participants and impressive presentations by 3 Keynote Speakers, 2 Hot Topic Speakers, and 9 Flash Talk Speakers.
+            We hope to make IMAB2026 an even better forum for next-generation fusion research!
+            View details here: https://sites.google.com/view/imab2025 </p>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Organizing Committee</h2>
+        <p>Haruhisa Oda (UTokyo, Conference Chair)<br>
+           Saki Nishibori (UTokyo)<br>
+           Fumiya Kojima (UTokyo)
+        </p>
+        <h2 style="font-family:'Orbitron', sans-serif; color:darkblue; font-weight:bold;">
+            Registration & Information
+          </h2>
+          
+          <div class="info-grid">
+            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd_6X2xAhIH5ySb1MZm7ORQP2KCZDSzMlx8WFjzX7RJiUrJBA/viewform" target="_blank">
+              Register Now For Free! (Coming soon)
+            </a>
+          
+            <a class="info-btn" href="mailto:haruhisa-oda0722@g.ecc.u-tokyo.ac.jp" target="_blank">
+                Send Email
+            </a>
+          
+            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd_6X2xAhIH5ySb1MZm7ORQP2KCZDSzMlx8WFjzX7RJiUrJBA/viewform" target="_blank">
+              Venue map (Coming soon)
+            </a>
+          </div>
+        <h2 style="font-family:'Orbitron', sans-serif; color:darkblue; font-weight:bold;">
+          Extended Abstract Submission
+        </h2>
+          <p>If you want to apply for overseas travel support, you need to submit the extended abstract by March 31st, 2026. Please use the following template TeX file to prepare your extended abstract.
+            IMAB2026 is a hybrid event, and you can present both in-person and online. If you are accepted for overseas travel support, then you need to present your work in person.
+          </p>    
+          <a class="info-btn"
+            href="papertemplate/imab2026-template.tex"
+            download>
+            Download Extended Abstract Template from here
+          </a>
+          
     </body>
 </html> 
