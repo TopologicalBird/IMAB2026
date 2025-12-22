@@ -13,43 +13,64 @@
           
             .hero {
               position: relative;
+              height: 100vh;
+
+              /* 背景画像 */
+              background-image: url("img/IMG_0466.HEIC"); /* ← 実際の画像パス */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+
+              /* body padding 打ち消し（必要なら） */
               margin-left: -6vw;
               margin-right: -6vw;
               width: calc(100% + 12vw);
-              height: 100vh; /* 画面いっぱい */
-              background-image: url("img/IMG_0466.HEIC"); /* jpg / png / gif */
-              background-size: cover;
-              background-position: center;
-              
+              overflow: hidden;
             }
-          
+
+            /* 暗くするオーバーレイ */
             .hero-overlay {
               position: absolute;
               inset: 0;
               background: rgba(0, 0, 0, 0.1);
+              z-index: 0;
             }
-          
+            /* 文字の「枠」＝画像と同じ大きさ */
+            .hero-content {
+              position: relative;
+              z-index: 1;
+
+              height: 100%;                  /* ← hero と完全一致 */
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              padding: 15vh 6vw;
+              color: white;
+              text-align: center;
+              box-sizing: border-box;
+            }
+            
+
+            /* 文字 */
             .hero-text {
               position: relative;
               z-index: 1;
+
               height: 100%;
               display: flex;
               flex-direction: column;
-              /* 位置調整 */
-              justify-content: flex-start;   /* 上寄せ */
-              align-items: center;       /* 左寄せ */
+              justify-content: space-between;
 
-              padding-top: 20vh;             /* 上から少し離す（調整可） */
-              padding-left: 0vw;             /* 左余白 */
+              padding: 5vh 6vw;
 
               color: white;
               text-align: center;
-                }
-          
-            .hero-text h1 {
-              font-size: clamp(2rem, 8vw, 4rem);
-              margin: 0;
-              letter-spacing: 2px;
+            }
+
+            .hero h1,
+            .hero h2 {
+              font-family: 'Orbitron', sans-serif;
             }
           
             .hero-text p {
@@ -85,18 +106,26 @@
         </style>
     </head>
     <body>
-        <div class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-text">
-              <h1 style="font-family: 'Orbitron', sans-serif;">IMAB2026</h1>
-              <p>The Second International Workshop on<br>
-                Mathematics and AI for Biomedicine<br><br><br><br><br><br><br><br><br><br>
-                
-              </p>
-              <h2 style="font-family: 'Orbitron', sans-serif;">November 30th, 2026<br>
-                The University of Tokyo & Online<br><br></h2>
-            </div>
+      <div class="hero">
+        <div class="hero-overlay"></div>
+      
+        <div class="hero-content">
+          <div class="hero-top">
+            <h1>IMAB2026</h1>
+            <p>
+              The Second International Workshop on<br>
+              Mathematics and AI for Biomedicine
+            </p>
+          </div>
+      
+          <div class="hero-bottom">
+            <h2>
+              November 30th, 2026<br>
+              The University of Tokyo & Online
+            </h2>
+          </div>
         </div>
+      </div>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
         <div style="
         display:flex;
