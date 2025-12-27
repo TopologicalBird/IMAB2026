@@ -85,6 +85,13 @@
             max-width: 90vw;
             margin: 0 auto;
             }
+            .info-grid2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            }
 
             .info-btn {
             display: flex;
@@ -103,6 +110,43 @@
             text-align: center;
 
             box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            }
+            .research-card {
+              background: #ffffff;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+              padding: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            /* タイトル */
+            .research-card h3 {
+              font-size: 1.3rem;
+              margin-bottom: 1rem;
+              color: darkblue;
+            }
+
+            /* 内容 */
+            .research-card p {
+              font-size: 1rem;
+              color: #555;
+              flex-grow: 1;
+            }
+
+            /* Read Moreボタン */
+            .research-card a {
+              margin-top: 1rem;
+              text-decoration: none;
+              color: #ffffff;
+              background-color: darkblue;
+              padding: 0.5rem 1rem;
+              border-radius: 6px;
+              text-align: center;
+              display: inline-block;
+              transition: background-color 0.3s ease;
             }
             footer {
               position: fixed;
@@ -234,21 +278,25 @@
         <h2 style="font-family:'Orbitron', sans-serif; color:darkblue; font-weight:bold;">
           Abstract Submission
         </h2>
-          <p>There are two submission types; <span style="font-weight: bold;">Short Abstract</span> and <span style="font-weight: bold;">Extended Abstract</span>.<br>
-            If you want to apply for overseas travel support, you need an Extended Abstract. Submission deadline is <span style="font-weight: bold;">March 31st, 2026.</span> Please use the template TeX file to prepare your extended abstract.
-            Please send your Extended Abstract to the Organizer Email above.<br>
-            IMAB2026 is a hybrid event, and you can present both in-person and online. If you are accepted for overseas travel support, then you need to present your work in person.<br>
-            For presenters who do not apply for overseas travel support, please submit a short abstract (<200 words) using the short abstract submission form.
-          </p>    
-          <div class="info-grid">
-            <a class="info-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc2yRhA5GebfyUj0bFTYcx8FyTUCYcsTGAuMuObJIXtm9-JqA/viewform?usp=publish-editor" target="_blank">
-              Short Abstract Submission Form
-            </a>
-          
-            <a class="info-btn" href="papertemplate/imab2026-template.tex" download>
-                Extended Abstract Template
-            </a>
+        <div class="info-grid2">
+          <div class="research-card">
+            <h3>Short Abstract</h3>
+            <p>
+              For all presenters except for those who apply for overseas travel support.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2yRhA5GebfyUj0bFTYcx8FyTUCYcsTGAuMuObJIXtm9-JqA/viewform?usp=publish-editor">Submission Form</a>
           </div>
+          <div class="research-card">
+            <h3>Extended Abstract</h3>
+            <p>
+              For presenters who want to apply for the overseas travel support.<br>
+              Submission deadline is <span style="font-weight: bold;">March 31st, 2026.</span><br>
+              Please use the template TeX file to prepare your extended abstract and send it to the Organizer Email above.
+            </p>
+            <a href="papertemplate/imab2026-template.tex" download>Extended Abstract Template</a>
+          </div>
+        </div>  
+          
           <footer>
             IMAB2026
           </footer>
