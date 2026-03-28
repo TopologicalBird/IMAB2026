@@ -158,6 +158,77 @@
               text-align: center;
               padding: 8px;
             }
+            .organization-card {
+              background: #ffffff;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+              padding: 1.5rem;
+
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: stretch;   /* ← 中央揃え */
+
+              text-align: center;    /* ← 文字も中央 */
+
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .organization-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            }
+
+            /* ===== 団体名 ===== */
+            .organization-card h3 {
+              font-size: 1.3rem;
+              margin-bottom: 1rem;
+              color: darkblue;
+            }
+
+            /* ===== ロゴ（シンプル版） ===== */
+            .organization-card img {
+              width: 60%;        /* ← メイン制御（これだけでOK） */
+              #max-width: 200px;  /* ← 大きくなりすぎ防止 */
+              height: auto;
+              margin-top: 10px;
+
+              transition: transform 0.3s ease;
+            }
+
+            .organization-card img:hover {
+              transform: scale(1.05);
+            }
+
+            /* ===== 説明 ===== */
+            .organization-card p {
+              font-size: 1rem;
+              color: #555;
+              margin-top: 10px;
+            }
+
+            /* ===== ボタン ===== */
+            .organization-card .org-button {
+              margin-top: 1rem;
+              text-decoration: none;
+              color: #ffffff;
+              background-color: darkblue;
+              padding: 0.5rem 1rem;
+              border-radius: 6px;
+              display: inline-block;
+              transition: background-color 0.3s ease;
+            }
+
+            .organization-card .org-button:hover {
+              background-color: #001a66;
+            }
+
+            /* ===== レイアウト（複数カード用） ===== */
+            .card-container {
+              display: flex;
+              gap: 20px;
+              flex-wrap: wrap;
+            }
         </style>
     </head>
     <body>
@@ -303,8 +374,38 @@
         <p>If you apply for overseas travel support using the abstract format above, we will apply for travel grants from external funding sources.<br>
           The basic travel schedule will be as follows: arrival on November 29th, IMAB2026 on November 30th, free discussion on December 1st, and departure on December 2nd.<br>
           If you want some modification in this travel schedule, please notify us when you submit your abstract.
-
         </p>
+        <h2 style="font-family:'Orbitron', sans-serif; color:darkblue; font-weight:bold;">
+          Funding, Collaboration and Support
+        </h2>
+        <div class="info-grid2">
+
+          <!-- ロゴあり -->
+          <div class="organization-card">
+            <h3>
+              <a href="https://square.umin.ac.jp/wings-lf/" target="_blank" class="org-title-link">
+                WINGS-LST (Collaboration)
+              </a>
+            </h3>
+            <div class="org-logo">
+              <a href="https://square.umin.ac.jp/wings-lf/" target="_blank">
+                <img src="img/wings.jpg" alt="Organization Logo">
+              </a>
+            </div>
+          </div>
+        
+        
+          <!-- ロゴなし -->
+          <div class="organization-card">
+            <h3>
+              <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/boost/" target="_blank" class="org-title-link">
+                BOOST NAIS (Funding)
+              </a>
+            </h3>
+            <div class="org-logo empty"></div>        
+          </div>
+        
+        </div>
           
           <footer>
             IMAB2026
