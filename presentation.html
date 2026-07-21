@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IMAB2026</title>
+        <style>
+            body {
+              margin: 0;
+              font-family:Arial, Helvetica, sans-serif;
+              padding-left: 6vw;      /* 左余白 */
+              padding-right: 6vw;     /* 右余白 */
+              padding-bottom: 50px;
+            }
+          
+            .hero {
+              position: relative;
+              height: 100vh;
+
+              /* 背景画像 */
+              background-image: url("./img/IMG_0466.jpg"); /* ← 実際の画像パス */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+
+              /* body padding 打ち消し（必要なら） */
+              margin-left: -6vw;
+              margin-right: -6vw;
+              width: calc(100% + 12vw);
+              overflow: hidden;
+            }
+
+            /* 暗くするオーバーレイ */
+            .hero-overlay {
+              position: absolute;
+              inset: 0;
+              background: rgba(0, 0, 0, 0.1);
+              z-index: 0;
+            }
+            /* 文字の「枠」＝画像と同じ大きさ */
+            .hero-content {
+              position: relative;
+              z-index: 1;
+
+              height: 100%;                  /* ← hero と完全一致 */
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              padding: 15vh 6vw;
+              color: white;
+              text-align: center;
+              box-sizing: border-box;
+            }
+            
+
+            /* 文字 */
+            .hero-text {
+              position: relative;
+              z-index: 1;
+
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              padding: 5vh 6vw;
+
+              color: white;
+              text-align: center;
+            }
+
+            .hero h1,
+            .hero h2 {
+              font-family: 'Orbitron', sans-serif;
+            }
+          
+            .hero-text p {
+              margin-top: 1rem;
+              font-size: clamp(1rem, 3vw, 1.5rem);
+            }
+            .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            }
+
+            .info-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #00bfff, #7b00ff);
+            border-radius: 10px;
+
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            }
+            .map-container {
+              position: relative;
+              padding-top: 50%; 
+            }
+
+            .map-container iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 80%;
+              height: 100%;
+            }
+            .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            }
+            .info-grid2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            }
+
+            .info-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #00bfff, #7b00ff);
+            border-radius: 10px;
+
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            }
+            .research-card {
+              background: #ffffff;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+              padding: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            /* タイトル */
+            .research-card h3 {
+              font-size: 1.3rem;
+              margin-bottom: 1rem;
+              color: darkblue;
+            }
+
+            /* 内容 */
+            .research-card p {
+              font-size: 1rem;
+              color: #555;
+              flex-grow: 1;
+            }
+
+            /* Read Moreボタン */
+            .research-card a {
+              margin-top: 1rem;
+              text-decoration: none;
+              color: #ffffff;
+              background-color: darkblue;
+              padding: 0.5rem 1rem;
+              border-radius: 6px;
+              text-align: center;
+              display: inline-block;
+              transition: background-color 0.3s ease;
+            }
+            footer {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              background: darkblue;
+              color: white;
+              text-align: center;
+              padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">IMAB2026</h2>
+        <p>The Second International Workshop on Mathematics and AI for Biomedicine <br>
+          November 30th, 2026<br>
+          The University of Tokyo, Sanjo-Kaikan & Online (Hybrid event)
+        </p>
+        <div class="info-grid">
+          <a class="info-btn" href="index.html" target="_blank">
+            Back to Home
+          </a>
+        </div>
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Participation Guide</h2>
+        <div class="info-grid2">
+          <div class="research-card">
+            <h3>In Person</h3>
+            <p>
+              Please bring <b>1. nametag, 2. PC, and 3. earphone/headset.</b><br>
+              Eduroam, UTokyo WiFi, and Guest WiFi are available at the venue.
+            </p>
+          </div>
+          <div class="research-card">
+            <h3>Online</h3>
+            <p>
+              Please connect to the zoom link during Oral Presentations and virtual poster venue link during Poster Presentations.
+            </p>
+          </div>
+        </div>  
+        
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Presentation Guide</h2>
+        <h3>Presentation styles are Oral, Oral+Poster, or Poster. We will notify your presentation style once timetable is fixed.</h3>
+        <div class="info-grid2">
+          <div class="research-card">
+            <h3>Oral</h3>
+            <p>
+              Both in person and online presenters can connect to zoom with your device and present as usual.<br> 
+              Please avoid using physical pointers because online participants cannot see them.<br>
+              Please use pointers or cursors in your presentation app instead.<br>
+              Make sure to bring your earphone or headset with you to avoid audio mixing.
+            </p>
+          </div>
+          <div class="research-card">
+            <h3>Poster</h3>
+            <p>
+              The format of presentation material is <b>free</b> as long as <b>it has openly accessible URL</b> (such as sharing link of Google Drive for Everyone knowing the link).<br>
+              Make sure to send the link to the organizing committee by <b>November 28th</b>.<br>
+              We will place your presentation material to the virtual poster space.<br>
+              If you want a usual presentation style, you can follow our guide below!
+            </p>
+          </div>
+        </div>  
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Poster Preparation Guide</h2>
+        Coming soon!
+          <footer>
+            IMAB2026
+          </footer>
+
+    </body>
+</html> 
