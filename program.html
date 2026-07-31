@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IMAB2026</title>
+        <style>
+            body {
+              margin: 0;
+              font-family:Arial, Helvetica, sans-serif;
+              padding-left: 6vw;      /* 左余白 */
+              padding-right: 6vw;     /* 右余白 */
+              padding-bottom: 50px;
+            }
+            /* タイトル */ 
+            .program-title{ 
+              
+              font-family:'Orbitron',sans-serif; 
+              font-size:clamp(2rem,5vw,3.5rem); 
+              margin:50px 0 15px; 
+              letter-spacing:3px; 
+              color: darkblue;
+            } 
+            .program-subtitle{ 
+              
+              color:#86b2e5; 
+              margin-bottom:50px; 
+            }
+            /* タイムライン */ 
+            .timeline{ 
+              position:relative; 
+              width:min(900px,90vw); 
+              margin:0 0 0 3vw;
+              padding-left:45px; 
+            } 
+            .timeline::before{ 
+              content:""; 
+              position:absolute; 
+              left:15px; 
+              top:0; 
+              bottom:0; 
+              width:3px; 
+              background:linear-gradient( 
+                to bottom, 
+                #00bfff, 
+                #7b00ff 
+                ); 
+            } 
+            /* プログラム */ 
+            .program-item{ 
+              position:relative; 
+              margin-bottom:35px; 
+            } 
+            .program-item::before{ 
+              content:""; 
+              position:absolute; 
+              left:-38px; 
+              top:22px; 
+              width:18px; 
+              height:18px; 
+              border-radius:50%; 
+              background:#00bfff; 
+              box-shadow: 
+              0 0 12px #00bfff, 
+              0 0 20px #7b00ff; 
+            } 
+            .program-card{ 
+              background:rgba(255,255,255,0.06); 
+              border:1px solid rgba(0,191,255,.25); 
+              border-radius:12px; 
+              padding:20px; 
+              backdrop-filter:blur(6px); 
+              box-shadow: 0 5px 15px rgba(0,0,0,.25); 
+            } 
+            .time{ 
+            display:inline-block; 
+            padding:.45rem .9rem; 
+            border-radius:999px; 
+            background:linear-gradient( 
+              135deg, 
+              #00bfff, 
+              #7b00ff 
+              ); 
+              font-family:'Orbitron',sans-serif; 
+              font-size:.95rem; 
+              color:#fff; 
+              margin-bottom:15px; 
+            } 
+            .program-name{ 
+              font-size:1.35rem; 
+              font-weight:700; 
+              margin-bottom:8px; 
+            } 
+            
+            .program-detail{ 
+              color:#86b2e5; 
+              line-height:1.8; 
+            } 
+            /* ボタン */ 
+            .info-grid { 
+              display:grid; 
+              grid-template-columns:repeat(3,1fr); 
+              gap:2rem; 
+              max-width:90vw; 
+              margin:60px auto; 
+            } 
+            .info-btn{ 
+              display:flex; 
+              justify-content:center; 
+              align-items:center; 
+              padding:1.5rem 2rem; 
+              background:linear-gradient( 
+                135deg, 
+                #00bfff, 
+                #7b00ff 
+                ); 
+              border-radius:10px; 
+              font-family:'Orbitron',sans-serif; 
+              font-weight:700; 
+              color:#fff; 
+              text-decoration:none; 
+              transition:.25s; 
+            } 
+            .info-btn:hover{ 
+              transform:translateY(-3px); 
+              box-shadow: 0 8px 20px rgba(0,191,255,.35); 
+            } 
+            /* スマホ */ 
+            @media(max-width:768px){ 
+              .timeline{ 
+                padding-left:35px; 
+              } 
+              .program-card{ 
+                padding:18px; 
+              } 
+              .info-grid{ 
+                grid-template-columns:1fr; 
+              } 
+            }
+            footer {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              background: darkblue;
+              color: white;
+              text-align: center;
+              padding: 8px;
+            }
+
+        </style>
+    </head>
+    <body>
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">IMAB2026</h2>
+        <p>The Second International Workshop on Mathematics and AI for Biomedicine <br>
+          November 30th, 2026<br>
+          The University of Tokyo, Sanjo-Kaikan & Online (Hybrid event)
+        </p>
+        <div class="info-grid">
+          <a class="info-btn" href="index.html" target="_blank">
+            Back to Home
+          </a>
+        </div>
+        <h1 class="program-title">PROGRAM (Tentative)</h1>
+        <p class="program-subtitle">
+        This program is a tentative version and will change based on session reorganization and speaker schedules. <br>
+        We will send each speaker an official message for presentation time confirmation. The program is subject to change based on this.<br>
+        Venue open from 9:00, Hall open from 9:45
+        </p>
+
+        <div class="timeline">
+
+            <div class="program-item">
+
+                <div class="program-card">
+
+                    <div class="time">
+                        09:30
+                    </div>
+
+                    <div class="program-name">
+                        Reception Open
+                    </div>
+
+                    <div class="program-detail">
+                        Please come to the reception desk between 9:30-9:55.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="program-item">
+
+                <div class="program-card">
+
+                    <div class="time">
+                        10:00
+                    </div>
+
+                    <div class="program-name">
+                        Opening
+                    </div>
+
+                    <div class="program-detail">
+                      Please be seated and ready by 10:00.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="program-item">
+
+                <div class="program-card">
+
+                    <div class="time">
+                        10:05-10:35
+                    </div>
+
+                    <div class="program-name">
+                        Artificial Intelligence in Pathology
+                    </div>
+
+                    <div class="program-detail">
+                        Speakers: 
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="program-item">
+
+                <div class="program-card">
+
+                    <div class="time">
+                        10:40-11:40
+                    </div>
+
+                    <div class="program-name">
+                        Methods & Approaches in Clinical Context
+                    </div>
+
+                    <div class="program-detail">
+                        Speakers: 
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        11:40-12:40
+                    </div>
+                    <div class="program-name">
+                        Lunch Break
+                    </div>
+                    <div class="program-detail">
+                        Please come back to the venue and enter virtual poster venue by 12:40.
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        12:40-13:20
+                    </div>
+                    <div class="program-name">
+                        Virtual Poster Session 1
+                    </div>
+                    <div class="program-detail">
+                        Morning Session Speakers + TBD
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        13:20-14:10
+                    </div>
+                    <div class="program-name">
+                        Magnetic Resonance Imaging and Quantitative Susceptibility Mapping
+                    </div>
+                    <div class="program-detail">
+                        Speakers: 
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        14:15-15:25
+                    </div>
+                    <div class="program-name">
+                        Japan Soceity for Omics Medicine Joint Session
+                    </div>
+                    <div class="program-detail">
+                        Speakers: 
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        15:30-16:20
+                    </div>
+                    <div class="program-name">
+                        Mathematical Sciences in Biomedical Data Analysis
+                    </div>
+                    <div class="program-detail">
+                        Speakers: 
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        16:30-17:10
+                    </div>
+                    <div class="program-name">
+                        Virtual Poster Session 2
+                    </div>
+                    <div class="program-detail">
+                        Afternoon Session Speakers + TBD
+                    </div>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-card">
+                    <div class="time">
+                        17:30
+                    </div>
+                    <div class="program-name">
+                        Closing
+                    </div>
+                    <div class="program-detail">
+                        The venue closes at 18:00.
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <h2 style="font-family: 'Orbitron', sans-serif; color: darkblue;font-weight: bold;">Speakers (Tentative)</h2>
+        Alphabetical order. Timetable will be announced later.
+        <h3>
+          <ul>Akira Sumikawa (Kumamoto University)</ul>
+          <ul>Ayumu Fujiwara (University of Tokyo)</ul>
+          <ul>Daisuke Komura (University of Tokyo)</ul>
+          <ul>Don Vicendese (University of Melbourne)</ul>
+          <ul>Fumiya Kojima (University of Tokyo)</ul>
+          <ul>Haruhisa Oda (University of Tokyo)</ul>
+          <ul>Jacinto Colan (Nagoya University)</ul>
+          <ul>Ryuhei Aoyama (JIHS)</ul>
+          <ul>Saki Nishibori (University of Tokyo)</ul>
+          <ul>Vanessa Robins (Australian National University)</ul>
+          <ul>Yi Wang (Cornell University)</ul>
+          <ul>Yuri Morizane (University of Osaka)</ul>
+        </h3>
+        <h3>
+          We are welcoming presentations! <br>
+          If you would like to give a presentation, please register your interest using the participant registration form.
+        </h3>
+          <footer>
+            IMAB2026
+          </footer>
+
+    </body>
+</html> 
